@@ -31,7 +31,8 @@ caesarEncrypt (){
       END_CHAR=$(printf "\\$(printf %o "$END_VAL")") #TO CHAR TRANSFORMATION
 
       FINAL_TEXT+=$END_CHAR
-
+    else
+      FINAL_TEXT+=$CHAR
     fi
 
   done
