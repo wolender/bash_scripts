@@ -20,8 +20,23 @@ done
 caesarEncrypt (){
 
   for ((i = 0 ; i <= ${#TEXT}; i++)); do
-    echo ${TEXT:i:1}
+    CHAR=${TEXT:i:1}
+
+    # Check if the char is a letter
+
+    if [[ $CHAR =~ [a-z] ]]; then
+
+      ASCII_VAL=$(printf "%d" "'$CHAR") #TO ASCII TRANSFORMATION
+      END_VAL=$((( ASCII_VAL - 97 + SHIFT ) % 26 + 97))
+      END_CHAR=$(printf "\\$(printf %o "$END_VAL")") #TO CHAR TRANSFORMATION
+
+      FINAL_TEXT+=$END_CHAR
+
+    fi
+
   done
+
+  echo $FINAL_TEXT
 
 }
 
@@ -32,4 +47,7 @@ else
   exit 1
 fi
 
-caesarEncrypt
+encrypted_text=$(caesarEncrypt)
+
+echo "$encrypted_text" > $OUTPUTFILE
+
