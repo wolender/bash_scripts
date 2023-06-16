@@ -54,13 +54,10 @@ case $operator in
     ;;
   %)
     for ((i = 1; i < ${#numbers[@]}; i++)); do
-      result=$((result / numbers[i]))
+      result=$((result % numbers[i]))
     done
     ;;
-  *)
-    echo "Invalid operation: $operation" >&2
-    exit 1
-    ;;
+
 esac
 
 echo "The ressult is : $result"
