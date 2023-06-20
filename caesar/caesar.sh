@@ -32,7 +32,7 @@ caesarEncrypt (){
 
       FINAL_TEXT+=$END_CHAR
     else
-      FINAL_TEXT+=$CHAR
+      FINAL_TEXT+=$CHAR # if its not a letter dont sypher
     fi
 
   done
