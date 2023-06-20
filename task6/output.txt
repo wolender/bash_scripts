@@ -1,7 +1,10 @@
 
-Curent date is: Tue Jun 20 13:18:21 CEST 2023 
+Curent date is: Tue Jun 20 14:03:07 CEST 2023 
 Curent user: wolender 
-internal IP address is: inet 10.60.3.55  
+Internal IP address is: inet 10.60.3.55  
+External IP address: "85.232.252.1"
 Hostname: C9549
-System uptime: 13:18  up 8 days,  2:46, 2 users, load averages: 3.23 2.19 1.95 
-System PhysMem: 14G used (2767M wired, 916M compressor), 1971M unused. 
+System uptime: 14:03  up 8 days,  3:31, 2 users, load averages: 2.01 1.89 1.84 
+Disk usage: used 11Gi free 173Gi 
+System memmory: 15G used free: 1180M unused 
+CPU cores: 4 and frequency 2.30GHz 
