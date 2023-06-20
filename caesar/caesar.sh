@@ -1,5 +1,6 @@
 #!/bin/bash
-
+#use example 
+# -s <SHIFT_VALUE> -i <INPUT_FILE> -o <OUTPUTFILE> 
 while getopts ":s:i:o:" arg; do
   case ${arg} in
     s)    

@@ -1,6 +1,19 @@
 #!/bin/bash
 #implementation of task 5
 
+#uses input.txt file to pass text -i inputfile.txt
+
+#-v to change lowercase to upper and vice versa
+#-r to reversse the order of lines in a file
+#-I all characters are tranformed to lower
+#-u all characters are tranformed to uper
+#-s <A_WORD> <B_WORD> to replace a word with b word
+
+#use example
+#./task5.sh -i <INPUTFILE> -o <OUTPUTFILE> -s <A_WORD> <B_WORD>
+ 
+
+
 UPTOLOWER=0
 REVERSE=0
 ALLTOLOWER=0

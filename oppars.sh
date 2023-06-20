@@ -1,5 +1,7 @@
 #!/bin/bash
 #sequence of numbers task
+#use example
+# -d for debug -o <OPERATOR> -n <NUMBER NUMBER NUMBER ...>
 
 print_debug_info() {
   echo "User: $USER"

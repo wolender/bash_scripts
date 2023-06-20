@@ -1,4 +1,6 @@
 #!/bin/bash
+#implementacion of task6 
+#run the script to geete information of your system in output.txt file
 
 TEXT=""
 OUTPUTFILE=output.txt
