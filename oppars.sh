@@ -1,5 +1,19 @@
 #!/bin/bash
 #sequence of numbers task
+
+# [PRACTICAL TASK 2]
+
+# Write bash script accepting operation parameter (“-”, “+”, “*”, “%”), sequence of numbers and debug flag.
+
+# For example:
+
+# ./your_script.sh -o % -n 5 3 -d
+
+# Result: 2
+
+# ./your_script.sh -o + -n 3 5 7 -d
+
+# Result: 15  
 #use example
 # -d for debug -o <OPERATOR> -n <NUMBER NUMBER NUMBER ...>
 
@@ -10,27 +24,28 @@ print_debug_info() {
   echo "Numbers: ${#numbers[@]}"
 }
 debug=0
-while getopts "o:n:d" flag;
-do
-    case "${flag}" in
-        o) 
-            operator=${OPTARG} 
-            
-            ;;
-        d) 
-            debug=1 
-            
-            ;;
-        n)
-            numbers=()
-            shift $((OPTIND - 2))
-            while [[ $# -gt 0 ]] && [[ $1 != -* ]]; do
-                numbers+=("$1")
-                shift
-            done
-            ;;
-        
-    esac
+numbers=()
+i=0
+for arg in "$@"; do
+  case $arg in
+    -d)
+        debug=1
+        shift
+        ;;
+    -o)
+        shift 
+        operator=$1
+        ;;
+    *)
+      if [[ $arg =~ [0-9] ]]; then
+        numbers+=($arg)
+        shift
+      else
+        shift
+      fi
+      ;;
+
+  esac
 done
 
 if [ $debug -eq 1 ]; then
